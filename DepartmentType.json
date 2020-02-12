@@ -1,0 +1,30 @@
+{
+    "enumerationValues": [
+        {
+            "value": "Sales",
+            "synonyms": [
+                "One",
+                "Business development"
+            ]
+
+        },
+        {
+            "value": "Marketing",
+            "synonyms": [
+                "Two",
+                "Press",
+                "Human Resources"
+            ]
+        },
+        {
+            "value": "Recruitment",
+            "synonyms": [
+                "Three",
+                "Recruiters",
+                "Recruiting"
+            ]
+        }
+    ],
+    "name": "DepartmentTypes",
+    "description": "Which department to get directed to"
+}
