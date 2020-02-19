@@ -1,0 +1,65 @@
+{
+    "confirmationPrompt": {
+        "maxAttempts": 2,
+        "messages": [
+            {
+                "content": "Okay, transfering you to {DepartmentType} Department. Does this sound okay?",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "name": "MarketingIntent",
+    "rejectionStatement": {
+        "messages": [
+            {
+                "content": "Okay, I will not transfer you.",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "sampleUtterances": [
+        "Two",
+        "Number two",
+        "Marketing",
+        "Marketing department",
+        "Go to marketing",
+        "Talk to marketing",
+        "Transfer to marketing",
+        "Transfer to marketing department",
+        "I'd like to speak with marketing",
+        "I'd like to speak with the marketing department",
+        "I'd like to talk to marketing",
+        "I'd like to talk to the marketing department",
+        "Please transfer me to marketing",
+        "Please transfer me to number two"
+    ],
+    "slots": [
+        {
+            "slotType": "DepartmentTypes",
+            "name": "DepartmentType",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "What department would you like to be transfered to?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 1,
+            "slotTypeVersion": "$LATEST",
+            "sampleUtterances": [
+                "I want to be transferred to {DepartmentType}",
+                "To {DepartmentType}",
+                "Take me to {DepartmentType}",
+                "I want to go to {DepartmentType}"
+            ],
+            "description": "The department to be transferred to"
+        }
+    ],
+    "fulfillmentActivity": {
+        "type": "ReturnIntent"
+    },
+    "description": "Intent be transferred to the Marketing Department"
+}
